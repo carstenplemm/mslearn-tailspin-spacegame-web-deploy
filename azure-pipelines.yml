@@ -1,12 +1,12 @@
 trigger:
-- '*'
+  - '*'
 
-variables:
+  variables:
   buildConfiguration: 'Release'
 
 stages:
 - stage: 'Build'
-  displayName: 'Build the web application '
+  displayName: 'Build the web application'
   jobs: 
   - job: 'Build'
     displayName: 'Build job'
@@ -17,7 +17,7 @@ stages:
 
     variables:
       wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
-      dotnetSdkVersion: '3.1.200'
+      dotnetSdkVersion: '3.1.100'
 
     steps:
     - task: UseDotNet@2
